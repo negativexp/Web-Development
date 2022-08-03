@@ -1,0 +1,16 @@
+.title {
+    min-height: 10vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toggleOn {
+    color: green;
+}
+
+.toggleOff {
+    color: red;
+}
