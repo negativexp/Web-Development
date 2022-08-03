@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef, useEffect } from "react";
+//import { uuid } from "uuidv4";
+import TodoList from "./TodoList";
+
+const LOCAL_STORAGE_KEY = "todoApp.todos"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [todos, setTodos] = useState([])
+  const todoNameRef = useRef()
+
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    if (storedTodos) setTodos(storedTodos)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
+  }, [todos])
+
+  function handleAddTodo(e) {
+    var name = todoNameRef.current.value
+    setTodos(prevTodos => {
+      return [...prevTodos, {id: prevTodos.length+1, name: name, complete: false}]
+    })
+    todoNameRef.current.value = null
+  }
+
+  return(
+    <>
+      <TodoList todos={todos}/>
+      <input ref={todoNameRef} type="text" />
+      <button onClick={handleAddTodo}>Add</button>
+      <button>Clear</button>
+      <br/><div>Total: 0</div>
+    </>
+  )
 }
 
 export default App;
