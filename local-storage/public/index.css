@@ -1,0 +1,19 @@
+p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+    border: 3px solid black;
+
+    padding: 10px;
+}
+
+.center-no-border {
+    margin: auto;
+    text-align: center;
+    border: 3px;
+    padding: 10px;
+}
