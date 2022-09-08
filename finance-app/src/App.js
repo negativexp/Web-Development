@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-const {v4: uuidv4 } = require("uuid");
+const {v4: uuidv4, stringify } = require("uuid");
 
 function App() {
 
@@ -25,6 +25,16 @@ function App() {
   function addItem() {
     var spentOn = document.getElementById("spentOnInput").value;
     var amount = document.getElementById("amountInput").value;
+
+    if(isNaN(amount)) {
+      document.getElementById("errorMsg").innerHTML = "❌";
+      return
+    }
+
+    //check if user used "," ; => "."
+    if(amount.includes(",")) {
+      amount = amount.replace(",", ".")
+    }
 
     //check if item is empty
     if (!spentOn || /^\s*$/.test(spentOn) || !amount || /^\s*$/.test(amount)) {
@@ -55,7 +65,7 @@ function App() {
   function calculateTotal() {
     var x = 0;
     items.forEach(element => {
-      x = x + parseInt(element.amount);
+      x = x + parseFloat(element.amount);
     });
     document.getElementById("total").innerHTML = "total: " + x;
   }
