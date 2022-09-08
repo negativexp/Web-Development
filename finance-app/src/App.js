@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import "./App.css";
 const {v4: uuidv4 } = require("uuid");
 
 function App() {
@@ -61,7 +62,8 @@ function App() {
   }
 
   function testFunc() {
-    console.log(uuidv4())
+    var x = document.getElementById("testInput").value;
+    console.log(x);
   }
 
 
@@ -69,13 +71,13 @@ function App() {
     <div className="App">
       <p id="errorMsg">👍</p>
       <input type="text" placeholder="spent on" id="spentOnInput"/>
-      <input type="text" placeholder="amount" id="amountInput"/>
+      <input type="number" pattern="[0-9]+" placeholder="amount" id="amountInput"/>
       <button onClick={() => {addItem()}}>Add</button>
       <button onClick={() => resetItems()}>Reset</button>
       <button onClick={() => testFunc()}>testfunc</button>
       <ul>
         {items.map(item => {return(
-          <li key={item.id}>{item.spentOn} | {item.amount}
+          <li className="full" key={item.id}>{item.spentOn} | {item.amount}
           <button onClick={() => removeItem(item.id)}>❌</button></li>
         )})}
       </ul>
