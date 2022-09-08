@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import "./App.css";
-const {v4: uuidv4 } = require("uuid");
+const {v4: uuidv4, stringify } = require("uuid");
 
 function App() {
 
@@ -26,6 +25,16 @@ function App() {
   function addItem() {
     var spentOn = document.getElementById("spentOnInput").value;
     var amount = document.getElementById("amountInput").value;
+
+    if(isNaN(amount)) {
+      document.getElementById("errorMsg").innerHTML = "❌";
+      return
+    }
+
+    //check if user used "," ; => "."
+    if(amount.includes(",")) {
+      amount = amount.replace(",", ".")
+    }
 
     //check if item is empty
     if (!spentOn || /^\s*$/.test(spentOn) || !amount || /^\s*$/.test(amount)) {
@@ -56,14 +65,13 @@ function App() {
   function calculateTotal() {
     var x = 0;
     items.forEach(element => {
-      x = x + parseInt(element.amount);
+      x = x + parseFloat(element.amount);
     });
     document.getElementById("total").innerHTML = "total: " + x;
   }
 
   function testFunc() {
-    var x = document.getElementById("testInput").value;
-    console.log(x);
+    console.log(uuidv4())
   }
 
 
@@ -71,13 +79,13 @@ function App() {
     <div className="App">
       <p id="errorMsg">👍</p>
       <input type="text" placeholder="spent on" id="spentOnInput"/>
-      <input type="number" pattern="[0-9]+" placeholder="amount" id="amountInput"/>
+      <input type="text" placeholder="amount" id="amountInput"/>
       <button onClick={() => {addItem()}}>Add</button>
       <button onClick={() => resetItems()}>Reset</button>
       <button onClick={() => testFunc()}>testfunc</button>
       <ul>
         {items.map(item => {return(
-          <li className="full" key={item.id}>{item.spentOn} | {item.amount}
+          <li key={item.id}>{item.spentOn} | {item.amount}
           <button onClick={() => removeItem(item.id)}>❌</button></li>
         )})}
       </ul>
