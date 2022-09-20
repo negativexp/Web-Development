@@ -21,10 +21,6 @@ body {
     padding-right: 0%;
 }
 
-.topnav li {
-    list-style: none;
-}
-
 .topnav a {
     float: right;
     color: #f2f2f2;
