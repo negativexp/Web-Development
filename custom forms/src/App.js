@@ -3,79 +3,54 @@ import './index.css';
 
 function App() {
 
-  const [serviceList, setServiceList] = useState([{ service: "" }]);
+  const [items, setItems] = useState([]);
 
-  const handleServiceChange = (e, index) => {
-    const { name, value } = e.target;
-    const list = [...serviceList];
-    list[index][name] = value;
-    setServiceList(list);
-  };
+  const HandleAdd = () => {
+    const old = [...items,[]]
+    setItems(old)
+  }
 
-  const handleServiceRemove = (index) => {
-    const list = [...serviceList];
-    list.splice(index, 1);
-    setServiceList(list);
-  };
+  const HandleChange = (e, i) => {
+    const inputData = [...items]
+    inputData[i] = e.target.value;
+    setItems(inputData)
+  }
 
-  const handleServiceAdd = () => {
-    setServiceList([...serviceList, { service: "" }]);
-  };
+  const HandleDelete = (i) => {
+    const deleteData = [...items]
+    deleteData.splice(i,1)
+    setItems(deleteData)
+  }
 
   return (
     <div className="App">
+
       <header className="App-header">
         <h1>negativexp forms</h1>
       </header>
 
-      <form className="App" autoComplete="off">
-        <div className="form-field">
-          <label htmlFor="service">Service(s)</label>
-          {serviceList.map((singleService, index) => (
-            <div key={index} className="services">
-              <div className="first-division">
-                <input
-                  name="service"
-                  type="text"
-                  id="service"
-                  value={singleService.service}
-                  onChange={(e) => handleServiceChange(e, index)}
-                  required
-                />
-                {serviceList.length - 1 === index && serviceList.length < 4 && (
-                  <button
-                    type="button"
-                    onClick={handleServiceAdd}
-                    className="add-btn"
-                  >
-                    <span>Add a Service</span>
-                  </button>
-                )}
-              </div>
-              <div className="second-division">
-                {serviceList.length !== 1 && (
-                  <button
-                    type="button"
-                    onClick={() => handleServiceRemove(index)}
-                    className="remove-btn"
-                  >
-                    <span>Remove</span>
-                  </button>
-                )}
-              </div>
+      <button onClick={() => HandleAdd()}>Add</button>
+
+      {items.map((data, i) => {
+        return (
+          <div>
+            <input value={data} onChange={e => HandleChange(e, i)}/>
+            <button onClick={() => HandleDelete(i)}>x</button>
+          </div>
+        )
+      })}
+
+      <div>
+        <h1>testy</h1>
+
+        {items.map((data ,i) => {
+          return (
+            <div>
+              <h2>{i} ; {data}</h2>
             </div>
-          ))}
-        </div>
-        <div className="output">
-          <h2>Output</h2>
-          {serviceList &&
-            serviceList.map((singleService, index) => (
-              <ul key={index}>
-                {singleService.service && <li>{singleService.service}</li>}
-              </ul>
-            ))}
-        </div>
-      </form>
+          )
+        })}
+      </div>
 
     </div>
   );
