@@ -3,6 +3,7 @@ import './index.css';
 
 function App() {
 
+  const [questions, setQuestions] = useState([]);
   const [items, setItems] = useState([]);
 
   const HandleAdd = () => {
@@ -20,6 +21,25 @@ function App() {
     const deleteData = [...items]
     deleteData.splice(i,1)
     setItems(deleteData)
+  }
+
+  const HandleAddQuestion = () => {
+    const old = [...questions,[]]
+    setQuestions(old);
+  }
+
+  const HandleAddItem = () => {
+
+  }
+
+  const HandleChangeQuestion = (e, i) => {
+    const inputData = [...questions]
+    inputData[i] = e.target.value;
+    setQuestions(inputData)
+  }
+
+  function test_func() {
+    console.log(questions)
   }
 
   return (
@@ -50,6 +70,23 @@ function App() {
             </div>
           )
         })}
+      </div>
+
+      <div>
+        <h1>fix</h1>
+        <button onClick={() => HandleAddQuestion()}>Create question</button>
+        <button onClick={() => test_func()}>test</button>
+
+        {questions.map((data, i) => {
+          return (
+            <div className="div-question">
+              <h1>question: <input value={data.title} onChange={(e) => HandleChangeQuestion(e, i)} placeholder="Title"></input></h1>
+              <button onClick={() => HandleAddItem()}>add option</button>
+
+            </div>
+          )
+        })}
+
       </div>
 
     </div>
