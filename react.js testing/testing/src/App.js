@@ -20,7 +20,6 @@ function App() {
   
       <div className="div-center">
 
-
         <button onClick={() => {console.log(Questions)}}>console log questions</button>
         <button onClick={() => {setQuestions(prev => [...prev, HandleAddQuestion()])}}>add quesiton</button>
 
