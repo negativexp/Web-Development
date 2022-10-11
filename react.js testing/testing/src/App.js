@@ -5,6 +5,10 @@ function App() {
 
   const[Questions, setQuestions] = useState([])
 
+  const DropdownOptions = [
+    "Options", "..."
+  ]
+
   const HandleAddQuestion = () => {
     var quesiton = {
       title: "",
@@ -45,10 +49,6 @@ function App() {
     setQuestions(deleteData)
   }
 
-  function test_func() {
-    console.log(Questions)
-  }
-
   return (
     <div className="App">
 
@@ -56,23 +56,37 @@ function App() {
         <h1>forms</h1>
       </header>
   
-      <div>
+      <div className="div-center">
+
         <button onClick={() => HandleAddQuestion()}>add quesiton</button>
-        <button onClick={() => test_func()}>test</button>
+        <button>test</button>
+
+        {/* Map thru questions */}
         {Questions.map((data, i) => {
           return (
             <div className="div-quesiton">
-              <h1>title: <input value={data.title} onChange={e => HandleChangeTitle(e, i)}/></h1>
-              <button onClick={() => HandleDeleteQuestion(i)}>Delete question</button>
-              <button onClick={() => HandleAddOption(i)}>Add Option</button>
+              <button onClick={() => HandleDeleteQuestion(i)} >Delete question</button>
+              <button onClick={() => HandleAddOption(i)}>Add option</button><br/>
+              <h1>Title:</h1>
+              <input value={data.title}
+                     onChange={e => HandleChangeTitle(e, i)}
+                     placeholder="Title"/>
+
+              <h1>Options:</h1>
+
+              {/* map thru options in questions */}
               {data.options.map((option, j) => {
                 return (
-                  <ul>
-                    <li>{j+1}
-                      <input value={option} onChange={e => HandleChangeOption(e, i, j)}/>
-                      <button onClick={() => HandleDeleteOption(i, j)}>X</button>
-                    </li>
-                  </ul>
+                  <div className="div-options">
+                    <ul>
+                      <li>
+                        <input value={option}
+                               onChange={e => HandleChangeOption(e, i, j)}
+                               placeholder={"Option " + parseInt(j+1)}/>
+                        <button onClick={() => HandleDeleteOption(i, j)}>X</button>
+                      </li>
+                    </ul>
+                  </div>
                 )
               })}
             </div>

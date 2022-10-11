@@ -61,8 +61,8 @@ function App() {
         <h1>negativexp forms</h1>
       </header>
 
-      <button onClick={() => _HandleAddItems()}>Add items</button>
       <button onClick={() => HandleAddQuestions()}>add questions</button>
+      <button onClick={() => test_func()}>test</button>
 
       {items.map((data, i) => {
         return (
@@ -72,36 +72,6 @@ function App() {
           </div>
         )
       })}
-
-      <button onClick={() => test_func()}>test</button>
-
-      <div>
-        <h1>Items</h1>
-
-        {items.map((data ,i) => {
-          return (
-            <div>
-              <h2>{i} ; {data}</h2>
-            </div>
-          )
-        })}
-
-        <h1>Questions</h1>
-        {question.map((data, i) => {
-          return (
-            <div>
-              <h2>{i} ; {data}</h2>
-              {items.map((data, i) => {
-                return (
-                  <div>
-                    <label>{data}</label>
-                  </div>
-                )
-              })}
-            </div>
-          )
-        })}
-      </div>
 
     </div>
   );
