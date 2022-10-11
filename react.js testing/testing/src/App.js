@@ -1,52 +1,14 @@
 import { useState } from "react";
+import { HandleAddQuestion, HandleChangeTitle, HandleChangeOption,
+         HandleAddOption, HandleDeleteQuestion, HandleDeleteOption } from "./scripts/ManageQuestions"
 import './App.css'
 
 function App() {
 
   const[Questions, setQuestions] = useState([])
 
-  const DropdownOptions = [
-    "Options", "..."
-  ]
-
-  const HandleAddQuestion = () => {
-    var quesiton = {
-      title: "",
-      options: ["", ""]
-    }
-    
-    setQuestions(prev => [...prev, quesiton])
-  }
-
-  const HandleChangeTitle = (e, i) => {
-    const inputData = [...Questions]
-    inputData[i].title = e.target.value;
-    setQuestions(inputData) 
-  }
-
-  const HandleChangeOption = (e, i, j) => {
-    const inputData = [...Questions]
-    inputData[i].options[j] = e.target.value;
-    setQuestions(inputData)
-  }
-
-  const HandleAddOption = (i) => {
-    const old = [...Questions]
-    const oldOpts = [...old[i].options, ""]
-    old[i].options = oldOpts
-    setQuestions(old)
-  }
-
-  const HandleDeleteQuestion = (i) => {
-    const deleteData = [...Questions]
-    deleteData.splice(i, 1)
-    setQuestions(deleteData)
-  }
-
-  const HandleDeleteOption = (i, j) => {
-    const deleteData = [...Questions]
-    deleteData[i].options.splice(j, 1)
-    setQuestions(deleteData)
+  function UpdateQuestions(data) {
+    setQuestions(data)
   }
 
   return (
@@ -58,18 +20,19 @@ function App() {
   
       <div className="div-center">
 
-        <button onClick={() => HandleAddQuestion()}>add quesiton</button>
-        <button>test</button>
+
+        <button onClick={() => {console.log(Questions)}}>console log questions</button>
+        <button onClick={() => {setQuestions(prev => [...prev, HandleAddQuestion()])}}>add quesiton</button>
 
         {/* Map thru questions */}
         {Questions.map((data, i) => {
           return (
             <div className="div-quesiton">
-              <button onClick={() => HandleDeleteQuestion(i)} >Delete question</button>
-              <button onClick={() => HandleAddOption(i)}>Add option</button><br/>
+              <button onClick={() => UpdateQuestions(HandleDeleteQuestion(i, Questions))} >Delete question</button>
+              <button onClick={() => UpdateQuestions(HandleAddOption(i, Questions))}>Add option</button><br/>
               <h1>Title:</h1>
               <input value={data.title}
-                     onChange={e => HandleChangeTitle(e, i)}
+                     onChange={e => UpdateQuestions(HandleChangeTitle(e, i, Questions))}
                      placeholder="Title"/>
 
               <h1>Options:</h1>
@@ -81,9 +44,9 @@ function App() {
                     <ul>
                       <li>
                         <input value={option}
-                               onChange={e => HandleChangeOption(e, i, j)}
+                               onChange={e => UpdateQuestions(HandleChangeOption(e, i, j, Questions))}
                                placeholder={"Option " + parseInt(j+1)}/>
-                        <button onClick={() => HandleDeleteOption(i, j)}>X</button>
+                        <button onClick={() => UpdateQuestions(HandleDeleteOption(i, j, Questions))}>X</button>
                       </li>
                     </ul>
                   </div>
