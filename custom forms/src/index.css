@@ -9,3 +9,8 @@ body {
     padding-top: var(--padding);
     padding-bottom: var(--padding);
 }
+
+.div-question {
+    border: 1px solid yellow;
+    padding: 20px;
+}
