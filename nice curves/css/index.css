@@ -9,7 +9,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 400px;
+    min-height: 200px;
     padding: 100px 10vw;
 }
 
@@ -28,6 +28,7 @@ section {
     width: 55%;
     height: 100%;
     background-color: #202731;
+    /* transform: translate(85%, 60%); */
     transform: translate(85%, 60%);
     z-index: 1;
 }
@@ -40,6 +41,7 @@ section {
     width: 55%;
     height: 100%;
     background-color: #3c31dd;
+    /* transform: translate(-4%, 40%); */
     transform: translate(-4%, 40%);
     z-index: 2;
 }
