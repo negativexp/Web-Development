@@ -1,0 +1,10 @@
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+    z-index: 0;
+    opacity: 50%;
+  }
+
+  .blob-content {
+    z-index: 1;
+  }
