@@ -13,35 +13,33 @@ section {
     padding: 100px 10vw;
 }
 
-.curve {
-    position: absolute;
-    height: 225px;
-    width: 100%;
-    bottom: 0;
-}
-
-.curve::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
+.nav-bar {
     background-color: #202731;
-    /* transform: translate(85%, 60%); */
-    transform: translate(85%, 60%);
-    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    color: white;
+    text-align: center;
 }
 
-.curve::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
-    background-color: #3c31dd;
-    /* transform: translate(-4%, 40%); */
-    transform: translate(-4%, 40%);
-    z-index: 2;
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar li {
+    float: right;
+}
+
+.nav-bar a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 100% 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-bar a:hover {
+    color: black;
+    background-color: white;
 }

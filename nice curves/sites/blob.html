@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/colors.css" />
+    <link rel="stylesheet" href="/css/blob.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <ul>
+        <li><a href="/sites/blob.html">blob</a></li>
+        <li><a href="/sites/wave.html">Wave (SVG)</a></li>
+        <li><a href="/sites/bubble.html">Bubble</a></li>
+        <li><a href="/index.html">Curve</a></li>
+      </ul>
+    </div>
+
+    <section class="blue" style="color: white">
+      <h1>Whats up</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum
+        dolorem sint delectus, nostrum deleniti cumque voluptatibus est, autem
+        explicabo ullam dicta maxime quam recusandae quos veniam? Animi iusto
+        ducimus iste.
+      </p>
+
+      <svg
+        id="visual"
+        viewBox="0 0 960 300"
+        width="960"
+        height="300"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <g transform="translate(471.5664764647245 161.09610003475515)">
+          <path
+            d="M68.9 -67.9C93.5 -44.2 120.8 -22.1 124.6 3.8C128.4 29.7 108.7 59.4 84.1 78.1C59.4 96.7 29.7 104.4 1.5 102.8C-26.6 101.3 -53.3 90.6 -72.1 71.9C-90.9 53.3 -102 26.6 -106.3 -4.4C-110.7 -35.4 -108.4 -70.7 -89.5 -94.4C-70.7 -118 -35.4 -130 -6.6 -123.4C22.1 -116.8 44.2 -91.5 68.9 -67.9"
+            fill="none"
+            stroke="#BB004B"
+            stroke-width="6"
+          ></path>
+        </g>
+        <g transform="translate(472.30817764799593 140.84503504327023)">
+          <path
+            d="M69.2 -64.7C94.2 -44.2 122.1 -22.1 123.1 1C124 24 98.1 48.1 73.1 72.7C48.1 97.4 24 122.7 -2.2 124.9C-28.5 127.2 -57 106.4 -77 81.7C-97 57 -108.5 28.5 -107.7 0.8C-106.9 -26.9 -93.7 -53.7 -73.7 -74.2C-53.7 -94.7 -26.9 -108.9 -2.4 -106.5C22.1 -104.1 44.2 -85.2 69.2 -64.7"
+            fill="none"
+            stroke="#BB004B"
+            stroke-width="6"
+          ></path>
+        </g>
+      </svg>
+
+      <script>
+        const tween = KUTE.formTo(
+            "#blob1",
+            { path: "#blob1" },
+            { path: "#blob2" }, 
+            { repeat: 999, duration: 3000, yoyo: true }
+        )
+        tween.start()
+      </script>
+
+    </section>
+
+    <section class="black" style="color: white">
+      <h1>not much wbu</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum
+        dolorem sint delectus, nostrum deleniti cumque voluptatibus est, autem
+        explicabo ullam dicta maxime quam recusandae quos veniam? Animi iusto
+        ducimus iste.
+      </p>
+    </section>
+  </body>
+</html>

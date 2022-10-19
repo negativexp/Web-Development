@@ -1,0 +1,31 @@
+.bubble-start {
+    color: white;
+}
+
+.bubble-end {
+    color: white;
+}
+
+.bubble-start::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 95%;
+    border-top-right-radius: 50% 50%;
+    border-top-left-radius: 50% 50%;
+}
+
+.bubble-end::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
