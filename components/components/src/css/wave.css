@@ -1,41 +1,19 @@
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-  
-  .wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 130px;
-  }
-  
-  .wave .shape-fill {
-    fill: #0066FF;
-  }
-  
-  .wave2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-  
-  .wave2 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 130px;
-    transform: rotateY(180deg);
-  }
-  
-  .wave2 .shape-fill {
-    fill: #0066FF;
-  }
+.spacer {
+  aspect-ratio: 1080/100;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px -1px;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url(/src/static/wave1.svg);
+}
+
+.layer2 {
+  background-image: url(/src/static/wave2.svg);
+}
+
+.flip {
+  transform: rotate(180deg);
+}
