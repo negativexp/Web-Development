@@ -1,23 +1,13 @@
 body {
   margin: 0;
   background: white;
+  color: white;
   overflow-x: hidden;
-}
-
-h1 {
-  text-align: center;
-  color: white;
-}
-
-p {
-  color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  position: static;
   align-items: center;
-  min-height: 200px;
   padding: 100px 10vw;
 }

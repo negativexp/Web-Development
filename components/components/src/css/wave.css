@@ -1,19 +1,14 @@
-.spacer {
-  aspect-ratio: 1080/100;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: 0px -1px;
-  background-size: cover;
-}
-
-.layer1 {
-  background-image: url(/src/static/wave1.svg);
-}
-
-.layer2 {
-  background-image: url(/src/static/wave2.svg);
-}
-
-.flip {
-  transform: rotate(180deg);
-}
+svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100%;
+  }
+  
+  .flip {
+    transform: rotate(180deg);
+  }
+  
+  .hide {
+    visibility: hidden;
+  }
