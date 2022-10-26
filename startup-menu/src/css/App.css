@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.center {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.outer-div {
+
+    /* Outside center */
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Inside Center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.head {
+    background-color: purple;
+    width: 75%;
+    height: 20%;
+}
+
+.body {
+    background-color: green;
+    width: 90%;
+    height: 50%;
+}
+
+.foot {
+    background-color: yellow;
+    width: 75%;
+    height: 20%;
+}
