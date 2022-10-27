@@ -12,11 +12,18 @@ function App() {
         </div>
 
         <div class="body">
-          <h2>Head</h2>
+          <ul>
+            <li><a>youtube.com</a></li>
+            <li><a>4chan.com</a></li>
+            <li><a>reddit.com</a></li>
+            <li><a>soundcloud.com</a></li>
+            <li><a>pornhub.com</a></li>
+          </ul>
+          <button>bruh</button>
         </div>
 
         <div class="foot">
-          <h1>Head</h1>
+          <p>Create by: newoutsider2k</p>
         </div>
 
       </div>

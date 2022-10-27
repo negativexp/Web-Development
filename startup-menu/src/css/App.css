@@ -5,8 +5,12 @@
 }
 
 h1 {
-    text-align: center;
     font-size: 48px;
+}
+
+p {
+    font-weight: bold;
+    float: right;
 }
 
 .center {
@@ -21,7 +25,6 @@ h1 {
 .outer-div {
 
     /* Outside center */
-    background-color: aqua;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,17 +44,31 @@ h1 {
 .head {
     background-color: purple;
     width: 75%;
-    height: 20%;
+    height: 125px;
 }
 
 .body {
     background-color: green;
-    width: 90%;
-    height: 50%;
+    width: 75%;
+    height: 200px;
+}
+
+.body ul {
+    list-style: none;
+
+    height: 200px;
+    width: 100%;
+    column-count: 3;
+    display: inline-block;
+    text-align: center;
+}
+
+.body li {
+
 }
 
 .foot {
     background-color: yellow;
     width: 75%;
-    height: 20%;
+    height: 20px;
 }
