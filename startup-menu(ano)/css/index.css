@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.9;
+    background-image: radial-gradient(#444cf7 2px, #000000 2px);
+    background-size: 20px 20px;
+
+    --x: 0px;
+    --y: 0px;
+    background-position: var(--x) var(--y);
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    outline: dashed 5px yellow;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head {
+    width: 75%;
+    height: 15%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: all 1s ease-out;
+      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head:hover {
+    width: 50%;
+    height: 50%;
+}
