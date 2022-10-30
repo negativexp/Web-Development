@@ -1,6 +1,6 @@
 const el = document.getElementById("module");
 
-el.addEventListener("mousemove", (e) => {
+window.addEventListener("mousemove", (e) => {
     speed = 20;
     x = -e.offsetX / speed;
     y = -e.offsetY / speed;
