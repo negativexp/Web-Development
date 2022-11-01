@@ -81,6 +81,7 @@ h1 {
 
 .content:hover > .head2 {
     height: 25%;
+    width: 90%;
     top: 5%;
     transition-delay: 0s;
 }
@@ -109,9 +110,9 @@ h1 {
 }
 
 .head2 {
-    top: 5%;
-    width: 90%;
-    height: 90%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
     transition: all 1s ease;
     outline: solid 2px grey;
     background-color: rgba(0, 0, 0, 0.75);
@@ -176,6 +177,10 @@ h1 {
     color: white;
     text-decoration: none;
     transition: all 0.2s ease;
+}
+
+.body-content a[target="_blank"]:after {
+    content: " (external)";
 }
 
 .body-content a:hover {
