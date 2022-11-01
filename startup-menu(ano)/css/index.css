@@ -59,6 +59,7 @@ h1 {
     color: white;
     width: 50%;
     height: 25%;
+
     transition: all 1s ease;
     transition-delay: 1s;
 
@@ -81,14 +82,15 @@ h1 {
 .content:hover > .head2 {
     height: 25%;
     top: 5%;
+    transition-delay: 0s;
 }
 
 .content:hover > .body2 {
     visibility: visible;
     opacity: 1;
-    height: 50%;
+    height: 45%;
     width: 90%;
-    top: 45%;
+    top: 35%;
     transition-delay: 0.3s;
 }
 
@@ -100,9 +102,9 @@ h1 {
 .content:hover > .search {
     visibility: visible;
     opacity: 1;
-    height: 5%;
+    height: 10%;
     width: 90%;
-    top: 35%;
+    top: 85%;
     transition-delay: 0.3s;
 }
 
@@ -183,7 +185,7 @@ h1 {
 }
 
 .search input {
-    width: 70%;
+    width: 60%;
     margin-right: 5px;
 }
 
