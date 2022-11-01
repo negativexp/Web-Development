@@ -1,0 +1,27 @@
+.svgtext {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition-property: visibility, opacity, top;
+    transition-duration: 1s;
+    transition-delay: 0s;
+}
+
+.content:hover > .svgtext {
+    visibility: visible;
+    opacity: 1;
+    animation: morph ease 25s;
+    transition-delay: 0s;
+    transition-duration: 1s;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+@keyframes morph {
+    from {
+        stroke-dasharray: 10%;
+    }
+    to {
+        stroke-dasharray: 100%;
+    }
+}

@@ -24,7 +24,7 @@
 
 .body-content ul {
     column-count: 1;
-    position: absolute;
+    list-style-type: circle;
 }
 
 .body-content li {
@@ -45,6 +45,7 @@
     color: #444cf7;
     font-weight: 900;
     text-decoration: underline;
+    margin: 5px;
 }
 
 .content:hover > .body2 {
