@@ -1,0 +1,57 @@
+.body2 {
+    visibility: hidden;
+    opacity: 0;
+    width: 90%;
+    height: 0%;
+    top: 95%;
+    outline: solid 2px grey;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: visibility 1s, opacity 1s, height 1s, width 1s, top 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    position: absolute;
+}
+
+.body-content {
+    padding: 0;
+    margin: 20px;
+}
+
+.body-content ul {
+    column-count: 1;
+    position: absolute;
+}
+
+.body-content li {
+    font-size: 18px;
+}
+
+.body-content a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.body-content a[target="_blank"]:after {
+    content: " (external)";
+}
+
+.body-content a:hover {
+    color: #444cf7;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.content:hover > .body2 {
+    visibility: visible;
+    opacity: 1;
+    height: 45%;
+    width: 90%;
+    top: 35%;
+    transition-delay: 0.3s;
+}

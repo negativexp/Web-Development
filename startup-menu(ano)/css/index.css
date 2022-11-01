@@ -60,7 +60,8 @@ h1 {
     width: 50%;
     height: 25%;
 
-    transition: all 1s ease;
+    transition: width 1s, height 1s;
+    transition-timing-function: ease;
     transition-delay: 1s;
 
     display: flex;
@@ -77,123 +78,4 @@ h1 {
     width: 40%;
     height: 60%;
     transition-delay: 0s;
-}
-
-.content:hover > .head2 {
-    height: 25%;
-    width: 90%;
-    top: 5%;
-    transition-delay: 0s;
-}
-
-.content:hover > .body2 {
-    visibility: visible;
-    opacity: 1;
-    height: 45%;
-    width: 90%;
-    top: 35%;
-    transition-delay: 0.3s;
-}
-
-.content:hover > .blob-motion {
-    width: 150%;
-    height: 150%;
-}
-
-.content:hover > .search {
-    visibility: visible;
-    opacity: 1;
-    height: 10%;
-    width: 90%;
-    top: 85%;
-    transition-delay: 0.3s;
-}
-
-.head2 {
-    top: 20%;
-    width: 60%;
-    height: 60%;
-    transition: all 1s ease;
-    outline: solid 2px grey;
-    background-color: rgba(0, 0, 0, 0.75);
-
-    overflow: hidden;
-
-    border-radius: 10px;
-
-    position: absolute;
-}
-
-.body2 {
-    visibility: hidden;
-    opacity: 0;
-    width: 90%;
-    height: 0%;
-    top: 95%;
-    outline: solid 2px grey;
-    background-color: rgba(0, 0, 0, 0.75);
-    transition: all 1s ease;
-    transition-delay: 0s;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    position: absolute;
-}
-
-.search {
-    visibility: hidden;
-    opacity: 0;
-    width: 90%;
-    height: 0%;
-    top: 95%;
-    outline: solid 2px grey;
-    background-color: rgba(0, 0, 0, 0.75);
-    transition: all 1s ease;
-    transition-delay: 0s;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    position: absolute;
-}
-
-.body-content {
-    padding: 0;
-    margin: 20px;
-}
-
-.body-content ul {
-    column-count: 1;
-}
-
-.body-content li {
-    font-size: 18px;
-}
-
-.body-content a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.body-content a[target="_blank"]:after {
-    content: " (external)";
-}
-
-.body-content a:hover {
-    color: #444cf7;
-    font-weight: 900;
-    text-decoration: underline;
-}
-
-.search input {
-    width: 60%;
-    margin-right: 5px;
-}
-
-.search button {
-    margin-left: 5px;
 }

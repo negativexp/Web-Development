@@ -1,0 +1,23 @@
+.head2 {
+    top: 20%;
+    width: 60%;
+    height: 60%;
+    outline: solid 2px grey;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    transition: height 1s, width 1s, top 1s;
+    transition-timing-function: ease;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    position: absolute;
+}
+
+.content:hover > .head2 {
+    height: 25%;
+    width: 90%;
+    top: 5%;
+    transition-delay: 0s;
+}

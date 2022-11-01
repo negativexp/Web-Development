@@ -10,3 +10,8 @@
 .blob-content {
     z-index: 1;
 }
+
+.content:hover > .blob-motion {
+    width: 150%;
+    height: 150%;
+}
