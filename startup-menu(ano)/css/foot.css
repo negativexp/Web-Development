@@ -2,19 +2,26 @@
     visibility: hidden;
     opacity: 0;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 35%;
+
     transition-property: visibility, opacity, top;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
     transition-delay: 0s;
+
+
+
 }
 
 .content:hover > .svgtext {
     visibility: visible;
     opacity: 1;
-    animation: morph ease 25s;
+    animation: morph ease 15s;
     transition-delay: 0s;
     transition-duration: 1s;
-    top: 50%;
-    transform: translate(0, -50%);
 }
 
 @keyframes morph {
