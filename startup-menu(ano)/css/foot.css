@@ -11,9 +11,6 @@
     transition-property: visibility, opacity, top;
     transition-duration: 0.3s;
     transition-delay: 0s;
-
-
-
 }
 
 .content:hover > .svgtext {
