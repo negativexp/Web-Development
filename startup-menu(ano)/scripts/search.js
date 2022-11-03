@@ -1,4 +1,4 @@
-list = [".com", ".org", ".net", ".int", ".edu", ".gov", ".mil", ];
+list = [".com", ".org", ".net", ".int", ".edu", ".gov", ".mil", ".cz"];
 
 function ButtonSearch() {
     search = document.getElementById("searchInput").value;
