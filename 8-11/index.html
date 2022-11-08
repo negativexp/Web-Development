@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .div-table {
+            background-color: white;
+            width: 1000px;
+        }
+
+        .div-top-table {
+            background-color: gray;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 1000px;
+        }
+
+        .table {
+            table-layout: fixed;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .table-bottom {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            white-space: nowrap;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .table .col1 {
+            padding-left: 5%;
+            width: 75%;
+        }
+
+        .table-bottom .col1 {
+            padding-left: 5%;
+            width: 75%;
+        }
+
+        .table-bottom tr:hover {
+            transition: background 0.3s ease;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            padding: 10px 0;
+        }
+
+        .table .top {
+
+        }
+
+        .center 
+
+        .hor-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Základní ceník</h1>
+    <div class="div-top-table">
+        <table class="table">
+            <tr class="top">
+                <td class="col1"><h2>Služba</h2></td>
+                <td class="col2"><h2>Cena</h2></td>
+            </tr>
+        </table>
+    </div>
+    <div class="div-table">
+        <table class="table-bottom">
+            <tr>
+                <td class="col1">Estetická výplň z fotokompozitního materiálu</td>
+                <td class="col2">1500 Kč až 3000 Kč</td>
+            </tr>
+            <tr>
+                <td class="col1">Endodoncie - ošetření kořenových kanálků</td>
+                <td class="col2">od 3000 Kč</td>
+            </tr>    
+            <tr>
+                <td class="col1">Mikroskopická endodoncie - ošetření kořenových kanálků oid mikroskopem</td>
+                <td class="col2">od 5000 Kč</td>
+            </tr> 
+        </table>
+    </div>
+</body>
+</html>
