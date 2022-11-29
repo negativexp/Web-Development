@@ -10,67 +10,95 @@
             margin: auto;
         }
         table {
-
             margin-top: 50px;
             width: 50%;
-            height: 50%;
         }
 
         img {
             display: block;
-            margin: auto;
+            width: 500px;
+            padding-top: 50px;
         }
 
         .grayText {
+            color:white;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
-            background-color: gray;
+            background-color: #5E5F5F;
             text-align: center;
-            padding-top: 25px;
-            padding-bottom: 25px;
+            padding-top: 50px;
+            padding-bottom: 50px;
             font-size: 28px;
+            font-weight: bolder;
+            outline: 2px solid #5E5F5F;
+
+            transition: letter-spacing 1s, color 1s, background-color 1s;
+        }
+
+        .grayText:hover {
+            letter-spacing: 50px;
+            color: #5E5F5F;
+            background-color: white;
         }
 
         .blueText {
-            padding-top: 25px;
-            padding-bottom: 25px;
+            color: white;
+            padding-top: 50px;
+            padding-bottom: 50px;
             text-align: center;
             font-size: 22px;
             border-bottom-left-radius: 15px;
-            background-color: lightblue;
+            background-color: #3E5473;
+            font-weight: bolder;
         }
 
         .greenText {
-            padding-top: 25px;
-            padding-bottom: 25px;
+            color: white;
+            padding-top: 50px;
+            padding-bottom: 50px;
             text-align: center;
             font-size: 22px;
             border-bottom-right-radius: 15px;
-            background-color: greenyellow;
+            background-color: #45974C;
+            font-weight: bolder;
         }
 
         td p {
             text-align: center;
             padding: 50px;
+            font-size: 20px;
         }
+
+        h1 {
+            margin: 50px;
+        }
+
+        .backgroundcolor1 {
+            background-color: #F4F9FF;
+        }
+        .backgroundcolor2 {
+            background-color: #F4FFF8;
+        }
+
     </style>
 </head>
 <body>
+    <h1 style="text-align: center;">Cenový trhák</h1>
     <table cellspacing="0">
         <tr>
             <td colspan="2" class="grayText">Notebook Apple</td>
         </tr>
         <tr>
-            <td><img src="images/1.jpg" width="300px"></td>
-            <td><img src="images/2.jpg" width="300px"></td>
+            <td class="backgroundcolor1"><img src="images/1.png"></td>
+            <td class="backgroundcolor2"><img src="images/1.png"></td>
         </tr>
         <tr>
-            <td><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Donec quis nibh at felis congue commodo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aliquam ante. Aliquam erat volutpat. Aenean vel massa quis mauris vehicula lacinia. Nunc dapibus tortor vel mi dapibus sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean id metus id velit ullamcorper pulvinar. Fusce tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Fusce wisi. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fusce nibh.</p></td>
-            <td><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Donec quis nibh at felis congue commodo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aliquam ante. Aliquam erat volutpat. Aenean vel massa quis mauris vehicula lacinia. Nunc dapibus tortor vel mi dapibus sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean id metus id velit ullamcorper pulvinar. Fusce tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Fusce wisi. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fusce nibh.</p></td>
+            <td class="backgroundcolor1"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Donec quis nibh at felis congue commodo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aliquam ante. Aliquam erat volutpat. Aenean vel massa quis mauris vehicula lacinia. Nunc dapibus tortor vel mi dapibus sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean id metus id velit ullamcorper pulvinar. Fusce tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo.</p></td>
+            <td class="backgroundcolor2"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Donec quis nibh at felis congue commodo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aliquam ante. Aliquam erat volutpat. Aenean vel massa quis mauris vehicula lacinia. Nunc dapibus tortor vel mi dapibus sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean id metus id velit ullamcorper pulvinar. Fusce tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo.</p></td>
         </tr>
         <tr>
-            <td class="blueText"></td>
-            <td class="greenText"></td>
+            <td class="blueText">Cena 98 580,- Kč</td>
+            <td class="greenText">Cena 68 580,- Kč</td>
         </tr>
     </table>
 </body>
