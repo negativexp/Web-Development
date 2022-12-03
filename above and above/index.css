@@ -44,23 +44,35 @@ button:hover {
     color: red;
 }
 
-@keyframes animationSection {
+button:disabled {
+    cursor: not-allowed;
+}
+
+@keyframes animationShowSection {
     0% {
+        border-radius: 25px;
         width: 70%;
         height: 70%;
         top: 100%;
     }
     50% {
+        border-radius: 25px;
         width: 70%;
         height: 70%;
         top: 10%;
     }
 
     100% {
+        border-radius: 0px;
         width: 100%;
         height: 100%;
         top: 0;
     }
+}
+
+@keyframes animationBlurContent {
+    from { filter: blur(0) brightness(100%); }
+    to { filter: blur(5px) brightness(50%); }
 }
 
 section {
@@ -71,20 +83,27 @@ section {
     transform: translateX(-50%);
 }
 
-.animationClass {
-    animation-name: animationSection;
-    animation-duration: 2s;
+.animationShowSection {
+    animation-name: animationShowSection;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+}
+
+.animationBlurContent {
+    animation-name: animationBlurContent;
+    animation-duration: 750ms;
     animation-fill-mode: forwards;
 }
 
 section:nth-child(1) {
-    background-color: purple;
+    background-color: gray;
+    z-index: 3;
 }
 section:nth-child(2) {
-    background-color: yellow;
+    background-color: lightslategray;
 }
 section:nth-child(3) {
-    background-color: green;
+    background-color: lightgray;
 }
 section:nth-child(4) {
     background-color: orange;
