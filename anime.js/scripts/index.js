@@ -11,11 +11,8 @@ const observer = new IntersectionObserver((entries) => {
         if(entry.isIntersecting) {
             console.log("is intersecting")
             animateBlock()
-            //entry.target.classList.add("isIntersecting")
         } else {
             console.log("is not intersecting")
-            animateBlockReset()
-            //entry.target.classList.remove("isIntersecting")
         }
     })
 })
@@ -29,21 +26,9 @@ function animateBlock() {
 
     anime({
         targets: elements,
-        translateX: [-800, 0],
+        translateX: [-700, 0],
         delay: anime.stagger(250),
         easing: 'easeInOutExpo',
-        duration: 1000
-    });
-}
-
-function animateBlockReset() {
-    var elements = document.querySelectorAll(".block")
-
-    elements.forEach(element => {
-        anime({
-            targets: element,
-            translateX: 0,
-            duration: 0
-        });
+        duration: 500
     });
 }
