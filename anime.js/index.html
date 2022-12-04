@@ -8,12 +8,17 @@
     <script defer src="scripts/index.js"></script>
     <link href="css/index.css" rel="stylesheet">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="navbar">
-            <img src="images/logo.png" width="100px">
+            <div class="logowtext">
+                <img src="images/logo.png" width="100px">
+                <span class="logotitle">Nezuko Sushi</span>
+            </div>
             <ul>
                 <li><a href="#section1">section 1</a></li>
                 <li><a href="#section2">section 2</a></li>
@@ -24,46 +29,39 @@
 
         <div id="section1" class="animateSection section">
             <div class="sectionContent">
-                <h1>section #01</h1>
-                <p>some text</p>
-                <div class="showcase verhorCenter hidden">
-                    <div class="block">
-
-                    </div>
-                    <div class="block">
-
-                    </div>
-                    <div class="block">
-
-                    </div>
+                <h1>Rezervace</h1>
+                <p>Vážení hosté, zde máte možnost zamluvit si stůl pro Vaše pohoštění v největší running sushi restauraci v Ústeckém kraji. S rezervací doporučujeme neotálet a vytvořit si ji s předstihem.</p>
+                <div class="showcase test">
+                    <img src="images/sushi.jpg">
                 </div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-
+                <button>REZERVUJ!</button>
             </div>
         </div>
     
         <div id="section2" class="animateSection section">
             <div class="sectionContent">
-                <h1>section #02</h1>
-                <p>some text</p>
+                <h1>Naše jídlo</h1>
             </div>
         </div>
     
         <div id="section3" class="animateSection section">
             <div class="sectionContent">
-                <h1>section #03</h1>
-                <p>some text</p>
-            </div>
-        </div>
-    
-        <div id="section4" class="animateSection section">
-            <div class="sectionContent">
-                <h1>section #04</h1>
-                <p>some text</p>
+                <h1>Něco o nás</h1>
+                <p>u nás vám garantujeme 3 věci...</p>
+                <div class="showcase verhorCenter hidden">
+                    <div class="block">
+                        <img src="images/dish.png">
+                        <h2>skvělé jídlo</h2>
+                    </div>
+                    <div class="block">
+                        <img src="images/checked.png">
+                        <h2>úžasný místo</h2>
+                    </div>
+                    <div class="block">
+                        <img src="images/people.png">
+                        <h2>super personál</h2>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

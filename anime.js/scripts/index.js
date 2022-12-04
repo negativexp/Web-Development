@@ -25,10 +25,24 @@ function animateBlock() {
     var elements = document.querySelectorAll(".block")
 
     anime({
-        targets: elements,
-        translateX: [-700, 0],
-        delay: anime.stagger(250),
+        targets: ".block:nth-child(1)",
+        translateX: [-300, 0],
+        delay: 250,
         easing: 'easeInOutExpo',
-        duration: 500
+        duration: 1000
+    });
+    anime({
+        targets: ".block:nth-child(2)",
+        translateY: [-300, 0],
+        delay: 500,
+        easing: 'easeInOutExpo',
+        duration: 1000
+    });
+    anime({
+        targets: ".block:nth-child(3)",
+        translateX: [300, 0],
+        delay: 750,
+        easing: 'easeInOutExpo',
+        duration: 1000
     });
 }
