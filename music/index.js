@@ -4,6 +4,17 @@ let elementLeft = 0;
 let elementTop = 0;
 
 for(let i = 0; i < musicBlocks.length; i++) {
+
+    // var childern = Array.from(musicBlocks[i].children);
+
+    // childern.forEach(el => {
+    //     if(el.nodeName.toLowerCase() != "img" && el.className != "music-block-title") {
+    //         console.log("is not img")
+    //         el.style.opacity = 0;
+    //     }
+    // })
+
+
     if(i % 4 != 0 || i == 0) {
         musicBlocks[i].style.left = elementLeft + "px";
         musicBlocks[i].style.top = elementTop + "px";
@@ -41,6 +52,13 @@ function handleMusicBlock(index) {
         targets: musicBlocks[index-1].querySelector("h2"),
         width: "100%"
     })
+    anime({
+        targets: [".music-block-content", ".music-block-options"],
+        opacity: 1,
+        width: "100%",
+        easing: "easeInQuad",
+        duration: 1000
+    })
 }
 
 function handleMusicBlockzIndex(index) {
@@ -50,4 +68,21 @@ function handleMusicBlockzIndex(index) {
             element.style.zIndex = 1;
         }
     })
+}
+
+function handleGoBackButton(index) {
+    console.log("go back")
+    anime({
+        targets: musicBlocks[index-1],
+        left: 0,
+        top: 0,
+        keyframes: [
+            {left: 0},
+            {top: 0},
+            {width: "150px"},
+            {height: "150px"},
+        ],
+        duration: 0,
+        easing: "easeInQuad"
+    });
 }
