@@ -77,7 +77,7 @@ function startEverything(button) {
     })
     .add({
         targets: ".navbar ul li",
-        top: "-50px",
+        top: "-100px",
         delay: function(el, i, l) {
             return i * 100;
         }
@@ -96,7 +96,7 @@ function pushDownOption(item) {
 function pushUpOption(item) {
     anime({
         targets: item,
-        top: "-50px",
+        top: "-100px",
         duration: 150,
         easing: "easeInOutSine",
     })

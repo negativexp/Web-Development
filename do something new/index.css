@@ -39,9 +39,9 @@ body::-webkit-scrollbar {
 }
 
 .navbar li {
-    top: -100px;
+    top: -200px;
     width: 100%;
-    height: 100px;
+    height: 200px;
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -78,6 +78,7 @@ body::-webkit-scrollbar {
     height: 550px;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
 }
 
 .web-content {
@@ -121,6 +122,21 @@ body::-webkit-scrollbar {
     height: 100%;
     left: -100%;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+#welcome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.credits-behind {
+    background-color: purple;
+    width: 100%;
+    height: 100%;
+    transform: rotate(20deg);
 }
 
 .svg {
