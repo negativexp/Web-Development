@@ -73,7 +73,7 @@ function startEverything(button) {
     .add({
         targets: "#svg5",
         opacity: [0, 1],
-        duration: 2000
+        duration: 1000
     })
     .add({
         targets: ".navbar ul li",
@@ -100,4 +100,23 @@ function pushUpOption(item) {
         duration: 150,
         easing: "easeInOutSine",
     })
+}
+
+function getSection(item) {
+    var list = Array.from(document.getElementById("web-content").children)
+    for(let i = 0; i < list.length; i++) {
+        if(list[i] == item) {
+            anime({
+                targets: item,
+                left: 0,
+                duration: 500
+            })
+        } else {
+            anime({
+                targets: list[i],
+                left: "-100%",
+                duration: 500
+            })
+        }
+    }
 }
