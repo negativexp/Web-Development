@@ -25,7 +25,7 @@ function startEverything(button) {
     tl.add({
         targets: button,
         left: "-10%",
-        duration: 1000
+        duration: 250
     })
     .add({
         targets: "#svg1",
@@ -73,7 +73,15 @@ function startEverything(button) {
     .add({
         targets: "#svg5",
         opacity: [0, 1],
-        duration: 1000
+        duration: 750
+    })
+    .add({
+        targets: ".welcome-menu ul",
+        opacity: 1
+    })
+    .add({
+        targets: ".welcome-menu li",
+        paddingTop: "0px"
     })
     .add({
         targets: ".navbar ul li",
@@ -82,41 +90,36 @@ function startEverything(button) {
             return i * 100;
         }
     })
-}
 
-function pushDownOption(item) {
     anime({
-        targets: item,
-        top: 0,
-        duration: 150,
-        easing: "easeInOutSine",
-    })
-}
-
-function pushUpOption(item) {
-    anime({
-        targets: item,
-        top: "-100px",
-        duration: 150,
-        easing: "easeInOutSine",
+        targets: "body",
+        delay: 6750,
+        backgroundColor: "rgb(52, 52, 52)",
+        easing: 'easeInOutSine',
+        duration: 750
     })
 }
 
 function getSection(item) {
     var list = Array.from(document.getElementById("web-content").children)
-    for(let i = 0; i < list.length; i++) {
-        if(list[i] == item) {
-            anime({
-                targets: item,
-                left: 0,
-                duration: 500
-            })
-        } else {
-            anime({
-                targets: list[i],
-                left: "-100%",
-                duration: 500
-            })
-        }
-    }
+    document.getElementById("welcome").classList.add("topWindow")
+    // anime({
+    //     targets: "#welcome",
+    //     transform: "translate(-50%, -50%)",
+    // })
+    // for(let i = 0; i < list.length; i++) {
+    //     if(list[i] == item) {
+    //         anime({
+    //             targets: item,
+    //             left: 0,
+    //             duration: 500
+    //         })
+    //     } else {
+    //         anime({
+    //             targets: list[i],
+    //             left: "-100%",
+    //             duration: 500
+    //         })
+    //     }
+    // }
 }
