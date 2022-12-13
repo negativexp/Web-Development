@@ -1,6 +1,6 @@
 var header = document.body.querySelector("header");
 var sections = document.body.querySelectorAll("section")
-var lastSection;
+var lastSection = "none";
 mainMenuSVG = [
     document.getElementById("svg1"),
     document.getElementById("svg2"),
@@ -17,7 +17,6 @@ startEverything();
 
 function startEverything(button) {
     console.log("lets go.")
-
     mainMenuSVG.forEach(element => {
         element.style.opacity = 1
     });
@@ -105,11 +104,8 @@ function startEverything(button) {
     })
 }
 
-var list = Array.from(document.getElementById("web-content").children)
-
 function getSection(item) {
     if(lastSection != item) {
-        setZindex();
         if(!header.classList.contains("topWindow")) {
             //get header to top and bring from bottom a selected item
             header.classList.add("topWindow")
@@ -122,35 +118,35 @@ function getSection(item) {
             //header is on top already
             //make the visible section change brightness
             //bring up clicked section
-    
-            list.forEach(el => {
-                if(el != item) {
-                    var tl = anime.timeline({
-                        targets: el,
-                        easing: "easeOutQuad",
-                        duration: 1000
-                        
-                    })
-                    .add({
-                        targets: item,
-                        top: "20%",
-                        easing: "easeOutQuad",
-                        duration: 2000
-                    })
-                }
+            setZindex(item)
+            var tl = anime.timeline({
+                targets: lastSection,
+                filter: "brightness(20%)",
+                endDelay: 1000
             })
+            .add({
+                targets: item,
+                width: "50%",
+                top: ["100%", "50%", "20%"],
+                duration: 1000
+            })
+            .add({
+                targets: item,
+                width: "100%"
+            })
+
         }
         lastSection = item
     }
 }
 
-function setZindex(section) {
-    var sectionsLength = document.querySelectorAll("section")
-    section.style.zIndex = sectionsLength--;
-    lastSection.style.zIndex = sectionsLength--;
-    section.forEach(el => {
-        if(el != section && el != lastSection) {
-            el.style.zIndex = sectionsLength--;
+function setZindex(item) {
+    //item clicked
+    let temp = sections.length
+    item.style.zIndex = temp--
+    sections.forEach(el => {
+        if(el != item) {
+            el.style.zIndex = temp--
         }
     })
 }
@@ -159,9 +155,10 @@ function removeTopWindow() {
     document.body.querySelector("header").classList.remove("topWindow")
     console.log("remove")
     anime({
-        targets: list,
+        targets: sections,
         top: "100%",
         duration: 1000,
         easing: "easeOutQuad"
     })
+    lastSection = "none"
 }

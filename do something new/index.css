@@ -54,6 +54,8 @@ section {
 
     position: absolute;
     top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 section:nth-child(1) {
