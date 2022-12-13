@@ -157,6 +157,9 @@ function setZindex(item) {
 
 function removeTopWindow() {
     document.body.querySelector("header").classList.remove("topWindow")
+    sections.forEach(el => {
+        el.classList.remove("lowerBrightness");
+    })
     console.log("remove")
     anime({
         targets: sections,
