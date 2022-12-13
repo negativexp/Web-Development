@@ -94,39 +94,31 @@ body::-webkit-scrollbar {
     height: 100%;
 }
 
-#about-me {
-    position: absolute;
+section {
+    padding-left: 100px;
+    padding-right: 100px;
+    border-top: 2px solid white;
     width: 100%;
     height: 100%;
-    left: -100%;
-    background-color: rgba(0, 0, 0, 0.7);
-}
 
-#works {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#idk {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -100%;
-    background-color: rgba(0, 0, 0, 0.7);
+section:nth-child(1) {
+    background-color: blue;
+}
+section:nth-child(2) {
+    background-color: green;
+}
+section:nth-child(3) {
+    background-color: yellow;
 }
 
-#contact {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -100%;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-#welcome {
+header {
+    z-index: 1000;
     height: 20%;
     position: relative;
     top: 50%;
@@ -195,7 +187,32 @@ body::-webkit-scrollbar {
     background-color: purple;
     width: 100%;
     height: 100%;
-    transform: rotate(20deg);
+}
+
+.credits-content {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    height: 90%;
+    border-radius: 25px;
+    backdrop-filter: blur(3px);
+    outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.marquee {
+    font-size: 38px;
+    letter-spacing: 2px;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.welcome-wrap {
+    height: 150px;
+    width: 650px;
 }
 
 .svg {
