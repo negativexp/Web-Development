@@ -8,6 +8,26 @@ body, html {
     font-family: 'Scope One', serif;
 }
 
+h1 {
+    /* font-family: 'Bokor', cursive; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: white;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+p {
+    background-color: red;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -67,7 +87,7 @@ body::-webkit-scrollbar {
     transition: box-shadow 1s ease;
 }
 
-.credits {
+footer {
     z-index: 3;
     position: absolute;
     display: flex;
@@ -96,12 +116,24 @@ main {
 
 section {
     background-color: rgb(52, 52, 52);
-    /* border-top: 2px solid white; */
     width: 100%;
     height: 100%;
+    border-top: 2px solid white;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 
     position: absolute;
     transition: filter 250ms ease;
+}
+
+article {
+    background-color: green;
+}
+
+.testdiv {
+    width: 500px;
 }
 
 /* SECTIONS end */
@@ -183,7 +215,7 @@ nav li:hover {
 }
 
 .lowerBrightness {
-    filter: brightness(20%);
+    filter: brightness(70%);
 }
 
 .credits-behind {

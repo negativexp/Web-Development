@@ -13,6 +13,8 @@ mainMenuSVG.forEach(element => {
     element.style.opacity = 0
 });
 
+document.body.querySelector("nav").style.opacity = 0
+
 startEverything();
 
 function startEverything(button) {
@@ -101,6 +103,11 @@ function startEverything(button) {
         backgroundColor: "rgb(52, 52, 52)",
         easing: 'easeInOutSine',
         duration: 750
+    })
+    anime({
+        targets: "nav",
+        delay: 6750,
+        opacity: 1
     })
 }
 
