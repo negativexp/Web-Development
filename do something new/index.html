@@ -101,17 +101,17 @@
       <nav>
         <ul>
           <li>
-            <button onclick="getSection(document.getElementById('about-me'))">
+            <button onclick="getSection(document.getElementById('about-me'), this)">
               About me.
             </button>
           </li>
           <li>
-            <button onclick="getSection(document.getElementById('works'))">
+            <button onclick="getSection(document.getElementById('works'), this)">
               Works.
             </button>
           </li>
           <li>
-            <button onclick="getSection(document.getElementById('contact'))">
+            <button onclick="getSection(document.getElementById('contact'), this)">
               Contact.
             </button>
           </li>
@@ -120,24 +120,25 @@
     </header>
 
     <main>
-      <section id="about-me" style="top: 100%">
+      <section id="about-me" class="flexCenter">
         <article>
           <h1>Hi, I'm Newoutsider.</h1>
           <h1>A junior programmer.</h1>
-          <p>With over a half a decade of self-education and trying new things - web development, backend programming, design, music, working out, skateboarding - I have few things to show you like my projects I've been working on and I'm not scared to learn or try new things I might find intresting.</p>
+          <p>With over a half a decade of self-education and trying new things - web development, backend programming, design - I have few things to show you like my projects I've been working on and since I'm young and dumb I'm not scared to try something new I might find intresting.</p>
           <p>I value <b>privacy</b>, <b>empathy</b>, <b>integrity</b> and new <b>opinions</b>.</p>
+          <p>I'm a person of many intrests, like coding but I'm also intrested in working out, skateboarding and music. A small fact about me or atleast this is what I've been told, I can sometimes be brutally honest if I'm having a serious conversation (which is good in my opinion), and sometimes I draw, and I like cats, and dogs, yeah.</p>
+          <button>click here for a image</button>
         </article>
+      </section>
+      <section id="works" class="flexCenter">
         <article>
-          <div class="testdiv">
-            <h1>img</h1>
-          </div>
+          <h1>Projects I made/created/designed</h1>
         </article>
       </section>
-      <section id="works" style="top: 100%">
-        <h1>works</h1>
-      </section>
-      <section id="contact" style="top: 100%">
-        <h1>contact</h1>
+      <section id="contact" class="flexCenter">
+        <article>
+          <h1>Contact</h1>
+        </article>
       </section>
     </main>
 

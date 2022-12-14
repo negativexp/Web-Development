@@ -14,13 +14,11 @@ h1 {
     font-size: 48px;
     letter-spacing: 2px;
     color: white;
-    padding: 0;
-    margin: 0;
     padding-left: 20px;
+    margin: 0;
 }
 
 p {
-    background-color: red;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     color: white;
@@ -45,46 +43,6 @@ body::-webkit-scrollbar {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.navbar {
-    width: 100%;
-    position: fixed;
-    z-index: 4;
-}
-
-.navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-}
-
-.navbar li {
-    top: -200px;
-    width: 100%;
-    height: 200px;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    transition: top 250ms ease;
-}
-
-.navbar li:hover > button {
-    box-shadow: 0px 5px lightgreen;
-}
-
-.navbar button {
-    border: none;
-    width: 100%;
-    height: 50%;
-    cursor: pointer;
-    background-color: transparent;
-    backdrop-filter: blur(10px) brightness(50%);
-    font-size: 16px;
-    box-shadow: 0px 5px aquamarine;
-    transition: box-shadow 1s ease;
 }
 
 footer {
@@ -118,18 +76,32 @@ section {
     background-color: rgb(52, 52, 52);
     width: 100%;
     height: 100%;
-    border-top: 2px solid white;
 
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    top: 100%;
+
+    padding-top: 20px;
 
     position: absolute;
     transition: filter 250ms ease;
 }
 
 article {
-    background-color: green;
+    
+}
+
+article button {
+    color: white;
+    margin-left: 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    transition: border 250ms ease;
+}
+
+article button:hover {
+    border-bottom: 2px solid hotpink;
 }
 
 .testdiv {
@@ -195,8 +167,12 @@ nav li {
     float: left;
 }
 
-nav li:hover {
-    text-decoration: underline;
+nav button:hover {
+    text-decoration: none;
+}
+
+.lineThrough {
+    text-decoration: line-through;
 }
 
 .topWindow {
@@ -216,6 +192,14 @@ nav li:hover {
 
 .lowerBrightness {
     filter: brightness(70%);
+}
+
+.flexCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
 }
 
 .credits-behind {
@@ -254,4 +238,10 @@ nav li:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1000px) {
+    article {
+        width: 1000px;
+    }
 }

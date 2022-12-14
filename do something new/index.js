@@ -1,5 +1,6 @@
 var header = document.body.querySelector("header");
 var sections = document.body.querySelectorAll("section")
+var headerButtons = document.body.querySelectorAll("nav button")
 var lastSection = "none";
 mainMenuSVG = [
     document.getElementById("svg1"),
@@ -111,7 +112,14 @@ function startEverything(button) {
     })
 }
 
-function getSection(item) {
+function getSection(item, button) {
+    headerButtons.forEach(el => {
+        if(el == button) {
+            el.classList.add("lineThrough")
+        } else {
+            el.classList.remove("lineThrough")
+        }
+    })
     if(lastSection != item) {
         if(!header.classList.contains("topWindow")) {
             //get header to top and bring from bottom a selected item
