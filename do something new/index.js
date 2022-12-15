@@ -112,14 +112,18 @@ function startEverything(button) {
     })
 }
 
-function getSection(item, button) {
+function crossSection(button) {
     headerButtons.forEach(el => {
         if(el == button) {
-            el.classList.add("lineThrough")
-        } else {
             el.classList.remove("lineThrough")
+        } else {
+            el.classList.add("lineThrough")
         }
     })
+}
+
+function getSection(item, button) {
+    crossSection(button)
     if(lastSection != item) {
         if(!header.classList.contains("topWindow")) {
             //get header to top and bring from bottom a selected item
@@ -154,6 +158,22 @@ function getSection(item, button) {
             });
         }
         lastSection = item
+    }
+}
+
+function projectOnClick(item) {
+    if(item.style.height != "500px") {
+        anime({
+            targets: item,
+            height: "450px",
+            duration: 250
+        })
+    } else {
+        anime({
+            targets: item,
+            height: "57px",
+            duration: 250
+        })
     }
 }
 
