@@ -128,16 +128,14 @@ article button:hover {
     display: flex;
 }
 
-.project-left {
-    background-color: blue;
-    width: 49%;
-
-    display: flex;
+.project-preinfo {
+    background-color: purple;
+    width: 25%;
 }
 
 .project-info {
     background-color: green;
-    width: 50%;
+    width: 75%;
 }
 
 .project-right {
