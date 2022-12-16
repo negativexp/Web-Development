@@ -126,12 +126,18 @@ article button:hover {
     margin-right: 40px;
 
     display: flex;
-    justify-content: space-around;
 }
 
 .project-left {
     background-color: blue;
     width: 49%;
+
+    display: flex;
+}
+
+.project-info {
+    background-color: green;
+    width: 50%;
 }
 
 .project-right {
