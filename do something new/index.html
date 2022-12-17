@@ -16,8 +16,6 @@
     <noscript>Your browser does not support JavaScript!</noscript>
   </head>
   <body>
-    <!-- <button class="button-start" onclick="startEverything(this)">start</button> -->
-
     <header>
       <div class="welcome-wrap" onclick="removeTopWindow()">
         <!-- Abril Fatface -->
@@ -125,36 +123,71 @@
         <article>
           <h1>Hi, I'm Newoutsider.</h1>
           <h1>A junior programmer.</h1>
-          <p>With over a half a decade of self-education and trying new things - web development, backend programming, design - I have few things to show you like my projects I've been working on and since I'm young and dumb I'm not scared to try something new I might find intresting.</p>
-          <p>I value <b>privacy</b>, <b>empathy</b>, <b>integrity</b> and new <b>opinions</b>.</p>
-          <p>I'm a person of many intrests, like coding but I'm also intrested in working out, skateboarding and music. A small fact about me or atleast this is what I've been told, I can sometimes be brutally honest if I'm having a serious conversation (which is good in my opinion), and sometimes I draw, and I like cats, and dogs, yeah.</p>
+          <p class="fixedText">With over a half a decade of self-education and trying new things - web development, backend programming, design - I have few things to show you like my projects I've been working on and since I'm young and dumb I'm not scared to try something new I might find intresting.</p>
+          <p class="fixedText">I value <b>privacy</b>, <b>empathy</b>, <b>integrity</b> and new <b>opinions</b>.</p>
+          <p class="fixedText">I'm a person of many intrests, like coding but I'm also intrested in working out, skateboarding and music. A small fact about me or atleast this is what I've been told, I can sometimes be brutally honest if I'm having a serious conversation (which is good in my opinion), and sometimes I draw, and I like cats, and dogs, yeah.</p>
           <button>click here for a image</button>
         </article>
       </section>
       <section id="works" class="flexCenter">
-        <article>
-          <h1>Projects that are worth showing.</h1>
-          <div class="project" onclick="projectOnClick(this)">
-            <div style="background-color: yellow;">
-              <h2>project #01</h2>
+        <article id="projects" class="flexWrap">
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/welcomepage.png">
             </div>
-            <div class="project-content">
-              <div class="project-preinfo">
-                <p>project name:</p>
-                <p>Project start date:</p>
-                <p>Project end date:</p>
-                <p>Project description:</p>
-              </div>
-              <div class="project-info">
-                <p>Welcome page.</p>
-                <p>Oct 26.</p>
-                <p>Nov 3.</p>
-                <p>This local site is supposed to run on computer start.
-                  The site contains your favorite links you use often with additional search bar, links
-                  can be changed to your needs. It takes one click to be where you want to be.</p>
-              </div>
-            </div>
+            <a href="https://github.com/negativexp/welcome-page" target="_blank">Welcome page.</a>
+            <p>A local site with your favorite links for easy access.</p>
           </div>
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/passwordmanager.PNG">
+            </div>
+            <a href="https://github.com/negativexp/Password-manager" target="_blank">Password manager.</a>
+            <p>Store and secure your logins, personal information, credit cards and notes under one password.</p>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/donttap.PNG">
+            </div>
+            <a href="https://github.com/negativexp/dont-tap" target="_blank">DON'T TAP!</a>
+            <p>A clicking game based on <a>White Tile</a> where you try to score as many points as possible without missing or running out of time.</p>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/fileencrypter.PNG">
+            </div>
+            <a href="https://github.com/negativexp/FileEncrypter" target="_blank">File encrypter.</a>
+            <p>Simple file encrypter and decrypter using rijndaelManaged.</p>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/welcomepage.png">
+            </div>
+            <a href="https://github.com/negativexp/SchoolSystem" target="_blank">School system.</a>
+            <p>Basic school system using WPF and MVVM architecture.</p>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/welcomepage.png">
+            </div>
+            <a>This website.</a>
+            <p>My very own personal website.</p>
+          </div>
+          <!--
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/welcomepage.png">
+            </div>
+            <a href="https://github.com/negativexp/SchoolSystem" target="_blank">School system.</a>
+            <p>Basic school system using WPF and MVVM architecture.</p>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img src="Images/welcomepage.png">
+            </div>
+            <a>This website.</a>
+            <p>My very own personal website.</p>
+          </div> -->
         </article>
       </section>
       <section id="contact" class="flexCenter">
@@ -164,7 +197,7 @@
       </section>
     </main>
 
-    <footer>
+    <!-- <footer>
       <div class="credits-content">
         <h1>asd</h1>
       </div>
@@ -202,6 +235,6 @@
           ><span class="marquee">newoutsider</span></marquee
         >
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

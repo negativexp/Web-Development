@@ -161,22 +161,6 @@ function getSection(item, button) {
     }
 }
 
-function projectOnClick(item) {
-    if(item.style.height != "500px") {
-        anime({
-            targets: item,
-            height: "450px",
-            duration: 250
-        })
-    } else {
-        anime({
-            targets: item,
-            height: "57px",
-            duration: 250
-        })
-    }
-}
-
 function setZindex(item) {
     //item clicked
     let temp = sections.length
