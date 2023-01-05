@@ -1,0 +1,38 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.followbox {
+    z-index: 100;
+    position: absolute;
+    width: 275px;
+    height: 350px;
+    background-image: url("-matyas.png");
+    background-position: center;
+    background-size: cover;
+}
+.outterbox {
+    position: absolute;
+    /* outline: solid 2px black; */
+    width: 1000px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    outline: solid 1px black;
+    width: 700px;
+    height: 200px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.info {
+    width: 700px;
+    align-self: center;
+}
