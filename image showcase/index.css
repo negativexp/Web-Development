@@ -4,86 +4,24 @@
     padding: 0;
 }
 
+.outerShowcase {
+  background-color: darkcyan;
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
+}
+
 .showcase {
-    position: relative;
     margin: 10px;
+    position: relative;
     width: 500px;
-    height: 400px;
-    outline: 2px solid green;
+    height: 300px;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .showcase img {
     position: absolute;
     width: 100%;
+    height: 100%;
 }
-
-input[type="checkbox"] {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.showcase-buttons {
-    opacity: 0.3;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-
-    padding: 10px;
-
-    border-radius: 10px;
-
-    display: flex;
-    gap: 10px;
-
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.showcase-buttons:hover {
-    opacity: 1;
-}
-
-
-.showcaseCheckbox .round {
-    position: relative;
-  }
-
-  .showcaseCheckbox .round label {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    height: 28px;
-    width: 28px;
-    display: block;
-  }
-
-  .showcaseCheckbox .round label:after {
-    border: 2px solid #fff;
-    border-top: none;
-    border-right: none;
-    content: "";
-    height: 6px;
-    left: 8px;
-    opacity: 0;
-    position: absolute;
-    top: 9px;
-    transform: rotate(-45deg);
-    width: 12px;
-  }
-
-  .showcaseCheckbox .round input[type="checkbox"] {
-    visibility: hidden;
-    display: none;
-    opacity: 0;
-  }
-
-  .showcaseCheckbox .round input[type="checkbox"]:checked + label {
-    background-color: #66bb6a;
-    border-color: #66bb6a;
-  }
-
-  .showcaseCheckbox .round input[type="checkbox"]:checked + label:after {
-    opacity: 1;
-  }
