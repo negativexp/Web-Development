@@ -10,23 +10,34 @@ body {
 }
 
 .project {
-    position: absolute;
+    background-color: #BFBDBC;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
     width: fit-content;
     display: flex;
     align-items: center;
+
+    padding-left: 50px;
+    padding-right: 50px;
+
+    height: 545px;
 }
 
 .project-info {
-    background-color: aquamarine;
-    width: 400px;
     display: flex;
     flex-direction: column;
     border-right: 1px solid black;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    height: calc(100% - 60px);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .name {
@@ -36,9 +47,11 @@ body {
     margin-bottom: 30px;
     padding: 50px;
     text-align: center;
-    background-color: white;
     transform: translateX(-25%);
-    border: 1px solid black;
+
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -51,20 +64,35 @@ body {
 }
 
 .project-laptop-showcase {
-    width: 744px;
-    height: 592px;
+    position: relative;
 }
 
-.project-laptop-showcase:nth-child(odd) {
-    background-image: url("images/laptop.webp");
+.laptop-image {
+    width: 888px;
+    height: calc(545px - 60px);
+    background-image: url("images/laptop2.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+    border-bottom: 1px solid black;
+}
+
+.line-under-laptop {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    top: 100%;
+
 }
 
 section {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 main {
